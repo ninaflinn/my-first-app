@@ -3,13 +3,15 @@ from getpass import getpass
 #API_KEY = getpass("Please input your AlphaVantage API Key: ")
 
 import os
-from dotenv import load_dotenv
-import requests
 import json
 from pprint import pprint
 from statistics import mean
-from plotly.express import line
 
+from dotenv import load_dotenv
+from plotly.express import line
+import requests
+
+from app.email_service import send_email
 
 load_dotenv()
 
@@ -71,7 +73,20 @@ fig.show()
 
 
 
+user_address = input("Please enter your email address: ")
 
+
+
+latest_rate = data[0]['value']
+latest_date = data[0]["date"]
+
+content = f"""
+<h1> Unemployment Report Email </h1>
+
+<p> Latest rate: {latest_rate}% as of {latest_date} </p>
+"""
+
+send_email(recipient_address=user_address, html_content=content, subject="Your Unemployment Report")
 
 
 
