@@ -8,8 +8,8 @@ from pprint import pprint
 from statistics import mean
 
 from dotenv import load_dotenv
-from plotly.express import line
 import requests
+from plotly.express import line
 
 from app.email_service import send_email
 
