@@ -52,6 +52,7 @@ Send an email:
 
 ```sh
 python app/email_service.py
+```
 
 # Testing
 
