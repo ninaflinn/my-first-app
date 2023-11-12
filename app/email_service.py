@@ -2,8 +2,7 @@ import requests
 import os
 
 from dotenv import load_dotenv
-from sendgrid import SendGridAPIClient
-from sendgrid.helpers.mail import Mail
+
 
 # ENVIRONMENT VARIABLES AND CONSTANTS
 
@@ -48,7 +47,7 @@ if __name__ == "__main__":
 
 
     my_content = """
-
+  
         <img
             src="https://img.freepik.com/free-vector/flat-ice-cream-collection_23-2148982427.jpg"
             alt="image of an ice cream"
