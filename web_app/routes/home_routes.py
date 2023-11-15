@@ -19,6 +19,7 @@ def about():
 
 @home_routes.route("/hello")
 def hello_world():
+
     print("HELLO...")
 
     # if the request contains url params, for example a request to "/hello?name=Harper"
@@ -32,4 +33,16 @@ def hello_world():
 
     message = f"Hello, {name}!"
     return message
+
     #return render_template("hello.html", message=message)
+
+@home_routes.route("/api/books.json")
+def books():
+    print("BOOKS..")
+    books = [
+        {"id":1, "title": "Harry Potter", "author": "JK Rowling"},
+        {"id":2, "title": "Lord of the Rings", "author": "Tolkien"},
+        {"id":3, "title": "Hunger Games", "author": "Collins"},
+    ]
+    return books
+    #return render_template("about.html")
