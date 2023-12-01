@@ -48,7 +48,7 @@ Run the unemployment report:
 python -m app.unemployment
 ```
 
-Run the stocks dashboard:
+Run the stocks report:
 ```sh
 python -m app.stocks
 ```
